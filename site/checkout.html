@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Acme Testshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="checkout">
+  <header>
+    <a class="logo" href="./">Acme Testshop</a>
+    <nav><a href="./">Shop</a> <a href="cart.html">Cart (<span data-testid="cart-count">0</span>)</a></nav>
+  </header>
+  <main>
+    <h1>Checkout</h1>
+    <section class="panel">
+      <h2>Order summary</h2>
+      <div id="summary"></div>
+      <div class="promo">
+        <label>Promo code <input id="promo" type="text" autocomplete="off"></label>
+        <button type="button" id="apply-promo">Apply</button>
+      </div>
+      <p id="promo-message" data-testid="promo-message" aria-live="polite"></p>
+    </section>
+    <form id="checkout-form" novalidate>
+      <h2>Shipping details</h2>
+      <label>Full name <input name="name" type="text" autocomplete="name"></label>
+      <p class="error" id="name-error"></p>
+      <label>Email <input name="email" type="email" autocomplete="email"></label>
+      <p class="error" id="email-error"></p>
+      <label>Address <input name="address" type="text" autocomplete="street-address"></label>
+      <p class="error" id="address-error"></p>
+      <label>ZIP code <input name="zip" type="text" inputmode="numeric" autocomplete="postal-code"></label>
+      <p class="error" id="zip-error"></p>
+      <p class="error" id="form-error"></p>
+      <button type="submit" class="button">Place order</button>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

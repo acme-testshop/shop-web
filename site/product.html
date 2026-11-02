@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Acme Testshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="product">
+  <header>
+    <a class="logo" href="./">Acme Testshop</a>
+    <nav><a href="./">Shop</a> <a href="cart.html">Cart (<span data-testid="cart-count">0</span>)</a></nav>
+  </header>
+  <main>
+    <h1 id="name"></h1>
+    <p class="price" id="price" data-testid="price"></p>
+    <p id="description"></p>
+    <div class="buy">
+      <label for="qty">Quantity</label>
+      <button type="button" id="decrease" aria-label="Decrease quantity">−</button>
+      <input id="qty" type="number" min="1" value="1">
+      <button type="button" id="increase" aria-label="Increase quantity">+</button>
+      <button type="button" id="add" class="button">Add to cart</button>
+    </div>
+    <p id="toast" role="status"></p>
+    <section id="recommendations" data-testid="recommendations" hidden>
+      <h2>You may also like</h2>
+      <ul class="grid"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

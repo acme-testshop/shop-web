@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acme Testshop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <header>
+    <a class="logo" href="./">Acme Testshop</a>
+    <nav><a href="./">Shop</a> <a href="cart.html">Cart (<span data-testid="cart-count">0</span>)</a></nav>
+  </header>
+  <main>
+    <h1>Products</h1>
+    <div class="filters">
+      <label>Search products <input id="search" type="search" placeholder="e.g. lamp"></label>
+      <label>Sort by
+        <select id="sort">
+          <option value="featured">Featured</option>
+          <option value="price-asc">Price: low to high</option>
+          <option value="price-desc">Price: high to low</option>
+        </select>
+      </label>
+    </div>
+    <ul id="products" class="grid"></ul>
+    <p id="no-results" hidden>No products match your search.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
