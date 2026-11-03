@@ -8,6 +8,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    env:
+      SQUALLY_INGEST_KEY: ${{ secrets.SQUALLY_INGEST_KEY }}
     strategy:
       fail-fast: false
       matrix:
